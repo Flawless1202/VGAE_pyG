@@ -1,0 +1,6 @@
+enc_in_channels: 3703
+enc_hidden_channels: 32
+enc_out_channels: 16
+
+lr: 0.001
+epoch: 200
