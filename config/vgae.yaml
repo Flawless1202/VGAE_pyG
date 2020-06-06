@@ -1,3 +1,5 @@
+dataset: "Cora"
+
 enc_in_channels: 1433
 enc_hidden_channels: 32
 enc_out_channels: 16

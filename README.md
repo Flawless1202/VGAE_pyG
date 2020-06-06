@@ -18,3 +18,13 @@ This respository implements variational graph auto-encoder in [Pytorch Geometric
 ```
 python train.py --load_config config/vgae.yaml
 ```
+
+## Result
+
+We follow the arguments set as the original [paper](https://arxiv.org/abs/1611.07308) and the results is shown below. 
+
+| Dataset | AUC |  AP |
+|---------|-----|-----|
+|   Cora  |0.903|0.911|
+| Citeseer|0.869|0.879|
+| Pubmed  |0.948|0.948|

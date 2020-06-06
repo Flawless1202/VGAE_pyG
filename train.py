@@ -1,3 +1,5 @@
+import os
+
 import torch
 import torch.nn as nn
 from torch.optim import Adam
@@ -17,7 +19,8 @@ args = parse_args()
 model = DeepVGAE(args).to(device)
 optimizer = Adam(model.parameters(), lr=args.lr)
 
-dataset = Planetoid("datasets", "Cora", transform=T.NormalizeFeatures())
+os.makedirs("datasets", exist_ok=True)
+dataset = Planetoid("datasets", args.dataset, transform=T.NormalizeFeatures())
 data = dataset[0].to(device)
 all_edge_index = data.edge_index
 data = train_test_split_edges(data, 0.05, 0.1)
